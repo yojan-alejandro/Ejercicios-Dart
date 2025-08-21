@@ -31,7 +31,7 @@ void main() {
     return;
   }
 
-  // Validación de número de teléfono
+  // Validamos el número de teléfono
   stdout.write("Número de teléfono (10 dígitos): ");
   String telefono = stdin.readLineSync()!;
   if (telefono.length != 10 || int.tryParse(telefono) == null) {

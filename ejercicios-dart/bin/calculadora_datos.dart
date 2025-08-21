@@ -1,4 +1,4 @@
-import 'dart:io'; // Librería para manejar entrada/salida en consola
+import 'dart:io'; 
 
 void main() {
   print("=== Calculadora de Datos Móviles ===");

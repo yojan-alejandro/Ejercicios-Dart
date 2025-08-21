@@ -1,20 +1,20 @@
 import 'dart:io';
 
 void main() {
-  print("=== Calculadora de Batería Móvil ===");
+  print("=== Calculadora de Batería ===");
 
   // Pedimos el porcentaje de batería actual
-  stdout.write("Porcentaje actual de batería (0-100): ");
+  stdout.write("¿Cual es el porcentaje actual de tu batería (0-100)?: ");
   double bateria = double.parse(stdin.readLineSync()!);
 
   // Pedimos el promedio de horas de uso
-  stdout.write("Horas de uso promedio diario: ");
+  stdout.write("¿En promedio al día cuantas horas de uso pasas en el móvil?: ");
   double horasUso = double.parse(stdin.readLineSync()!);
 
   // Calculamos las horas restantes según el porcentaje
   double horasRestantes = (bateria / 100) * horasUso;
 
-  print("\nCon el uso actual te quedan aproximadamente ${horasRestantes.toStringAsFixed(1)} horas de batería.");
+  print("\nCon el uso actual de tu móvil te quedan aproximadamente ${horasRestantes.toStringAsFixed(1)} horas de batería.");
 
   // Mostramos modos de ahorro
   print("\nModos de ahorro disponibles:");
@@ -32,5 +32,5 @@ void main() {
     horasRestantes *= 1.5; // Extiende un 50%
   }
 
-  print("Con el modo seleccionado, la batería durará: ${horasRestantes.toStringAsFixed(1)} horas.");
+  print("Con el modo seleccionado, la batería del móvil durará: ${horasRestantes.toStringAsFixed(1)} horas.");
 }
